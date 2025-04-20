@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+    --font-sans: "Century Gothic", ui-sans-serif, system-ui, sans-serif;
+
+    --color-transparent: transparent;
+    --color-current: currentColor;
+    --color-white: #fff;
+    --color-black: #000;
+
+    --text-0: 0;
+    --text-0--line-height: 0;
+
+    --text-b1: 1rem;
+    --text-b1--line-height: 1.2;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --spacing-nav: var(--nav-height);
+    --spacing-device: var(--device-height);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    @font-face {
+        font-family: 'Century Gothic';
+        src: url('/fonts/century-gothic/centurygothic.woff2') format('woff2'),
+            url('/fonts/century-gothic/centurygothic.woff') format('woff'),
+            url('/fonts/century-gothic/centurygothic.ttf') format('truetype'),
+            url('/fonts/century-gothic/centurygothic.otf') format('opentype');
+        font-weight: 400;
+        font-display: swap;
+    }
+
+    :root {
+        --device-height: 100vh;
+        --device-height: 100svh;
+        --nav-height: 58px;
+    }
+
+    @media (min-width: 1024px) {
+        :root {
+            --nav-height: 95px;
+        }
+    }
+
+    html,
+    body {
+        @apply bg-white text-black;
+    }
+
+    html {
+        @apply antialiased font-sans scroll-pt-nav;
+        @apply selection:bg-black selection:text-white;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+        @apply min-h-device flex flex-col;
+    }
+
+
+    svg {
+        @apply block max-w-full;
+    }
+
+    label[for],
+    button:not([disabled]) {
+        @apply cursor-pointer;
+    }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer components {
+
+    /* Navigation */
+    .burger-menu-line {
+        @apply absolute left-1/2;
+        @apply w-full h-0.5 bg-black;
+        @apply -translate-x-1/2;
+        @apply transition-all duration-500;
+        @apply will-change-transform;
+    }
+
+    .desktop-menu-link {
+        @apply hover:underline;
+    }
+
+    .mobile-menu-link {}
+
+    /* Buttons */
+    .button {
+        @apply border-0 rounded-none;
+        @apply inline-flex items-center justify-center;
+        @apply transition-all duration-300;
+    }
+
+    .button--primary {
+        @apply bg-black text-white;
+    }
+
+    /* Inputs */
+    .input {
+        @apply rounded-none outline-0 bg-transparent w-full border-2;
+        @apply flex px-4 py-2;
+    }
+
+    .input.error {
+        @apply border-error;
+    }
+
+    textarea.input {
+        @apply min-h-[125px];
+    }
+
+    .checkbox {
+        @apply w-full flex gap-4 items-center;
+    }
+
+    .checkbox a {
+        @apply underline hover:no-underline;
+    }
+
+    /* Accordion */
+    .accordion {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 1s cubic-bezier(0, 1, 0, 1);
+    }
+
+    .accordion.active {
+        max-height: 1000px;
+        transition: max-height 1s ease-in-out;
+    }
 }
