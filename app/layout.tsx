@@ -1,12 +1,13 @@
-import type { Metadata, Viewport } from "next";
-import "./globals.css";
-import React from "react";
-import { GlobalProvider } from "@/context/global-context";
-import PreloadFonts from "@/components/preload-fonts";
-import Nav from "@/components/nav";
-import Footer from "@/components/footer";
 import Analytics from "@/components/analytics";
+import Footer from "@/components/footer";
+import Nav from "@/components/nav";
+import PreloadFonts from "@/components/preload-fonts";
+import { GlobalProvider } from "@/context/global-context";
 import { APP_COLOR, APP_NAME, APP_URL, DEFAULT_METADATA } from '@/helpers/metadata';
+import { aristoclick } from '@mihilista/aristoclick-logo';
+import type { Metadata, Viewport } from "next";
+import React from "react";
+import "./globals.css";
 
 export const viewport: Viewport = {
     themeColor: APP_COLOR,
@@ -19,6 +20,8 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    aristoclick();
+
     return (
         <html lang="cs"
             className="scroll-smooth"
