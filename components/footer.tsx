@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import MadeByAristoclick from '@/components/made-by-aristoclick';
 
 const currentYear = new Date().getFullYear();
 
@@ -7,9 +8,10 @@ export default function Footer() {
     return (
         <footer className="">
             <Container as="div"
-                className=""
+                className="flex flex-col"
             >
-                {currentYear}
+                <span>{currentYear}</span>
+                <MadeByAristoclick />
             </Container>
         </footer>
     )
