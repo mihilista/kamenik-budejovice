@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const GTM_CONTAINER_ID = 'GTM-XYZ';
+const GTM_CONTAINER_ID = 'GTM-TVMZSHBX';
 
 export default function Analytics() {
     const isProduction = process.env.NODE_ENV === 'production';
