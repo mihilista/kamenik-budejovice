@@ -22,7 +22,7 @@ export default function GDPRPage() {
                     <strong>Tomáš Bíro</strong><br />
                     Lomy 44, 378 53 Člunek<br />
                     IČ: 21919305<br />
-                    E-mail: <a href="mailto:info@kamenikbudejovice.cz">info@kamenikbudejovice.cz</a>
+                    E-mail: <a href="mailto:info@kamenikzbudejovic.cz">info@kamenikzbudejovic.cz</a>
                 </p>
             </section>
 
@@ -89,7 +89,7 @@ export default function GDPRPage() {
             <section>
                 <header><h2>Kontakt</h2></header>
                 <p>
-                    V případě jakýchkoli dotazů ohledně zpracování osobních údajů mě můžete kontaktovat na <a href="mailto:info@kamenikbudejovice.cz">info@kamenikbudejovice.cz</a>.
+                    V případě jakýchkoli dotazů ohledně zpracování osobních údajů mě můžete kontaktovat na <a href="mailto:info@kamenikzbudejovic.cz">info@kamenikzbudejovic.cz</a>.
                 </p>
             </section>
         </Container>

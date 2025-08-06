@@ -34,7 +34,7 @@ export default function RootLayout({
                             "@context": "https://schema.org",
                             "@type": "Person",
                             "name": "Tomáš Bíro",
-                            "email": "info@kamenikbudejovice.cz",
+                            "email": "info@kamenikzbudejovic.cz",
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "Lomy 44",
@@ -42,7 +42,7 @@ export default function RootLayout({
                                 "addressLocality": "Člunek",
                                 "addressCountry": "CZ"
                             },
-                            "url": "https://www.kamenikbudejovice.cz"
+                            "url": "https://www.kamenikzbudejovic.cz"
                         })
                     }}
                 />
