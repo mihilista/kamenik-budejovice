@@ -1,8 +1,11 @@
+'use client';
+
 import { cn, scrollToTop } from "@/helpers/utils";
+import imageLogo from '@/public/images/logo.png';
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import SvgLogo from "@/components/svg/svg-logo";
 import { usePathname } from 'next/navigation';
+import React from "react";
 
 type LogoLinkProps = {
     className?: string;
@@ -22,9 +25,9 @@ export default function LogoLink({ className }: LogoLinkProps) {
         <Link href="/"
             className={cn('inline-flex', className)}
             onClick={handleLogoClick}
-            aria-label="Jít zpět nahoru"
+            aria-label={pathname === '/' ? 'Zpět na domovskou stránku' : 'Zpět na začátek stránky'}
         >
-            <SvgLogo />
+            <Image src={imageLogo} alt="Logo Kameník České Budějovice" className="w-full" />
         </Link>
     )
 }

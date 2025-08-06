@@ -1,7 +1,6 @@
-import React from "react";
 
-const PRELOAD_FONTS = [
-    '/fonts/poppins/Poppins-Regular.woff2'
+const PRELOAD_FONTS: string[] = [
+    // '/fonts/poppins/Poppins-Regular.woff2'
 ];
 
 export default function PreloadFonts() {

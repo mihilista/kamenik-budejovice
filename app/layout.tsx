@@ -1,9 +1,8 @@
 import Analytics from "@/components/analytics";
-import Footer from "@/components/footer";
 import Nav from "@/components/nav";
 import PreloadFonts from "@/components/preload-fonts";
 import { GlobalProvider } from "@/context/global-context";
-import { APP_COLOR, APP_NAME, APP_URL, DEFAULT_METADATA } from '@/helpers/metadata';
+import { APP_COLOR, DEFAULT_METADATA } from '@/helpers/metadata';
 import { aristoclick } from '@mihilista/aristoclick-logo';
 import type { Metadata, Viewport } from "next";
 import React from "react";
@@ -33,10 +32,17 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify({
                             "@context": "https://schema.org",
-                            "@type": "Organization",
-                            "name": APP_NAME,
-                            "url": APP_URL,
-                            "logo": `${APP_URL}/images/logo.png`
+                            "@type": "Person",
+                            "name": "Tomáš Bíro",
+                            "email": "info@kamenikbudejovice.cz",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Lomy 44",
+                                "postalCode": "378 53",
+                                "addressLocality": "Člunek",
+                                "addressCountry": "CZ"
+                            },
+                            "url": "https://www.kamenikbudejovice.cz"
                         })
                     }}
                 />
@@ -46,10 +52,10 @@ export default function RootLayout({
 
                 <GlobalProvider>
                     <Nav />
-                    <main className="flex-1">
+                    <main className="flex-1 py-nav">
                         {children}
                     </main>
-                    <Footer />
+                    {/* <Footer /> */}
                 </GlobalProvider>
 
             </body>

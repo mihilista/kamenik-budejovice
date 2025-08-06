@@ -4,8 +4,8 @@ export type LinkProps = {
 }
 
 export const NAV_LINKS: LinkProps[] = [
-    {
-        href: '#home',
-        label: 'Domů',
-    }
+    // {
+    //     href: '/privacy-policy',
+    //     label: 'Ochrana osobních údajů',
+    // }
 ];

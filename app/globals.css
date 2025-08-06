@@ -5,8 +5,12 @@
 
     --color-transparent: transparent;
     --color-current: currentColor;
-    --color-white: #fff;
-    --color-black: #000;
+    --color-white: #f7f2e8;
+    --color-black: #30241b;
+    --color-beige-400: #d6cbb0;
+    --color-gray-600: #bdb7a5;
+    --color-beige-600: #b49371;
+    --color-brown-600: #7a6251;
 
     --text-0: 0;
     --text-0--line-height: 0;
@@ -34,12 +38,12 @@
     :root {
         --device-height: 100vh;
         --device-height: 100svh;
-        --nav-height: 58px;
+        --nav-height: 97px;
     }
 
     @media (min-width: 1024px) {
         :root {
-            --nav-height: 95px;
+            --nav-height: 97px;
         }
     }
 
@@ -133,5 +137,31 @@
     .accordion.active {
         max-height: 1000px;
         transition: max-height 1s ease-in-out;
+    }
+
+    /* Legal Pages */
+    .legal-page {
+        @apply flex flex-col gap-8;
+    }
+
+    .legal-page h1 {
+        @apply text-4xl font-bold;
+    }
+
+    .legal-page>* {
+        @apply flex flex-col gap-4;
+        @apply w-full max-w-[800px] mx-auto;
+    }
+
+    .legal-page h2 {
+        @apply text-3xl font-bold;
+    }
+
+    .legal-page ul {
+        @apply list-disc list-inside;
+    }
+
+    .legal-page a {
+        @apply underline hover:no-underline;
     }
 }

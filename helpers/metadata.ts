@@ -6,12 +6,12 @@ interface PageMetadata {
     image?: string;
 }
 
-export const APP_NAME = '';
-export const APP_URL = 'https://www.mihailo.cz';
-export const APP_COLOR = '#000';
+export const APP_NAME = 'Kameník České Budějovice';
+export const APP_URL = 'https://www.kamenikbudejovice.cz';
+export const APP_COLOR = '#f7f2e8';
 
 const TITLE_SUFFIX = APP_NAME;
-const DESCRIPTION = '';
+const DESCRIPTION = 'Tomáš Bíro - kamenické práce v Českých Budějovicích a okolí. Nabízím profesionální služby s důrazem na kvalitu a detail.';
 
 export const DEFAULT_METADATA = {
     metadataBase: new URL(APP_URL),
