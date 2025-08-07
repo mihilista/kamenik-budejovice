@@ -6,7 +6,7 @@ export default function Home() {
         <Container as="section" className="flex flex-col items-center text-center">
             <header className="mb-8">
                 <h1 className="text-[32px] leading-[1.2] md:text-[48px] md:leading-[1.2] font-bold">
-                    Kameník České Budějovice
+                    Kameník z Budějovic
                 </h1>
             </header>
 
